@@ -62,9 +62,10 @@ class Game{
                          text(allPlayers[plr].name ,x-25,y+25);
 
                          
+                         
                      }
-                    
-                     
+                     text(allPlayers.player1.name + ":" + allPlayers.player1.score, 50, 100);
+                     text(allPlayers.player2.name + ":" + allPlayers.player2.score, 50, 150);
                  
                  }
                 
@@ -114,7 +115,10 @@ class Game{
                          if(fruitGroup.get(pos).isTouching(players))
                          {
                              fruitGroup.get(pos).destroy();
+                             player.score++;
                          }
+                        
+                         player.update()
                      }
                     
                   }
